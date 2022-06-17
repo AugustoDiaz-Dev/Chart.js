@@ -36,9 +36,10 @@
     Chart.defaults.font.family = 'sans-serif';
     Chart.defaults.font.size = 18;
     Chart.defaults.color = 'grey';
+    // Chart.defaults.plugins.title.display = 'true' 
 
     let populationChart = new Chart(myChart, {
-        type: 'bar', // bar, hotizontalBar, pie, line, doughnut, radar, polarArea.
+        type: 'bar', // bar, bubble, scatter, pie, line, doughnut, radar, polarArea.
         data: {
             labels: ["California", "Texas", "Florida", "New York", "Pennsylvania", "Illinois", "Ohio", "Georgia", "North Carolina", "Michigan"],
             datasets: [{
@@ -50,12 +51,36 @@
                 hoverBorderColor: 'black',
                 borderColor: 'grey', 
                 borderRadius: 8
-
             }], 
-          
-            
+           
         },
-        options: {}
+        options: {
+             indexAxis: 'y',
+                plugins: {
+                    title:{
+                    display: true, 
+                    text: 'Top 10 US States by Population',
+                }, 
+                legend: {
+                    display: true,
+                    position: 'right',
+                    labels: {
+                        fontColor: 'black'
+                    }
+                },
+                layout: {
+                    padding: {
+                        left: 50, 
+                        right: 0, 
+                        bottom: 0, 
+                        top: 0
+                    }
+                },
+                tooltips: {
+                    enabled: true
+                } 
+                } 
+            }
     });
 </script>
 
