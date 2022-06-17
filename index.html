@@ -28,8 +28,17 @@
             labels: ["California", "Texas", "Florida", "New York", "Pennsylvania", "Illinois", "Ohio", "Georgia", "North Carolina", "Michigan"],
             datasets: [{
                 label: 'Population', 
-                data: [39,613,493, 29,730,311, 21,944,577, 19,299,981, 12,804,123, 12,569,321, 11,714,618, 10,830,007, 10,701,022, 9,992,427]
-            }]
+                data: [39_613_493, 29_730_311, 21_944_577, 19_299_981, 12_804_123, 12_569_321, 11_714_618, 10_830_007, 1_0701_022, 9_992_427],
+                backgroundColor: ["red", "blue", "yellow", "green", "orange", "purple", "teal", "magenta", "yellowgreen", "salmon"],
+                borderWidth: 1,
+                hoverBorderWidth: 2,
+                hoverBorderColor: 'black',
+                borderColor: 'grey', 
+                borderRadius: 8
+
+            }], 
+          
+            
         },
         options: {}
     });
